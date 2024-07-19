@@ -1,105 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kilang Padi Saurma</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kilang Padi Saurma</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <img src="images/logo.png" alt="Kilang Padi Saurma" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Produk</a></li>
-                    <li><a href="#">Kontak</a></li>
-                    <li><a href="#">Sejarah Perusahaan</a></li>
-                    <li><a href="#">Penghargaan</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="hero">
-            <h1>Selamat Datang di Kilang Padi Saurma</h1>
-            <p>Mengolah Padi dengan Kualitas Terbaik</p>
-            <a href="#" class="btn">Lihat Produk</a>
-        </div>
-    </header>
-    <main>
-        <section class="keunggulan">
-            <h2>Keunggulan Kami</h2>
-            <div class="keunggulan-items">
-                <div class="keunggulan-item">
-                    <img src="images/teknologi.jpg" alt="Teknologi Modern">
-                    <h3>Teknologi Modern</h3>
-                    <p>Menggunakan teknologi modern untuk menghasilkan produk berkualitas tinggi.</p>
-                </div>
-                <div class="keunggulan-item">
-                    <img src="images/kualitas.jpg" alt="Berkualitas Tinggi">
-                    <h3>Berkualitas Tinggi</h3>
-                    <p>Selalu memastikan kualitas terbaik dari setiap produk yang dihasilkan.</p>
-                </div>
-                <div class="keunggulan-item">
-                    <img src="images/profesional.jpg" alt="Profesional">
-                    <h3>Profesional</h3>
-                    <p>Dikelola oleh tenaga ahli yang berpengalaman di bidangnya.</p>
-                </div>
-            </div>
-        </section>
-        <section class="proses-pengolahan">
-            <h2>Proses Pengolahan</h2>
-            <p>Bagaimana kami mengolah padi dengan teknologi modern.</p>
-        </section>
-        <section class="produk-unggulan">
-            <h2>Produk Unggulan</h2>
-            <p>Produk-produk terbaik yang kami hasilkan.</p>
-        </section>
-        <section class="penghargaan">
-            <h2>Penghargaan</h2>
-            <p>Penghargaan yang kami terima atas dedikasi dan kualitas kami.</p>
-        </section>
-        <section class="keberlanjutan">
-            <h2>Keberlanjutan</h2>
-            <p>Upaya kami dalam menjaga keberlanjutan lingkungan.</p>
-        </section>
-    </main>
-    <footer>
-        <section class="contact">
-            <h2>Kontak</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>Nama</h3>
-                    <p>Kilang Padi Saurma</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Alamat</h3>
-                    <p>Jl. Padi No. 123, Desa Saurma, Indonesia</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Email</h3>
-                    <p>info@kilangpadisaurma.com</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Tel</h3>
-                    <p>+62 813-3545-7890</p>
-                </div>
-            </div>
-            <div id="map"></div>
-        </section>
-        <section class="hubungi-kami">
-            <h2>Hubungi Kami</h2>
-            <form action="mailto:info@kilangpadisaurma.com" method="post" enctype="text/plain">
-                <label for="name">Nama</label>
-                <input type="text" id="name" name="name">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-                <label for="message">Pesan</label>
-                <textarea id="message" name="message"></textarea>
-                <button type="submit">Kirim</button>
-            </form>
-        </section>
-    </footer>
-    <script src="script.js"></script>
+  <header>
+    <h1>Selamat Datang di Kilang Padi Saurma</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="image1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="image2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="image3.jpg" style="width:100%">
+    </div>
+  </div>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <div id="map" style="height: 400px; width: 100%;"></div>
+
+  <script>
+    function initMap() {
+      var officeLocation = {lat: -6.200000, lng: 106.816666}; // Ganti dengan koordinat lokasi kantor Anda
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: officeLocation
+      });
+      var marker = new google.maps.Marker({
+        position: officeLocation,
+        map: map
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  <script src="script.js"></script>
 </body>
 </html>
