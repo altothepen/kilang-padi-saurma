@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #287909;
+    background: linear-gradient(to bottom, #002f04, #287909); /* Gradasi hijau gelap */
     color: #ffffff;
 }
 
