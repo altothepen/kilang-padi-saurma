@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,8 +11,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #1f1f1f;
+    padding: 20px 50px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 .logo {
@@ -37,12 +41,36 @@ nav a:hover {
 }
 
 .hero {
-    background-image: url('images/hero.jpg');
+    position: relative;
+    background-image: url('images/hero.png');
     background-size: cover;
     background-position: center;
     text-align: center;
     color: white;
-    padding: 100px 20px;
+    padding: 150px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    text-align: center;
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .hero h1 {
@@ -69,7 +97,7 @@ nav a:hover {
 }
 
 main {
-    padding: 20px;
+    padding: 20px 50px;
 }
 
 section {
@@ -110,9 +138,12 @@ h2 {
 footer {
     background-color: #1f1f1f;
     color: white;
-    padding: 40px 20px;
+    padding: 40px 50px;
 }
 
+.contact-info {
+### `styles.css` (lanjutan)
+```css
 .contact-info {
     display: flex;
     flex-wrap: wrap;
@@ -175,14 +206,13 @@ footer {
 .slideshow-container {
     position: relative;
     margin: auto;
+    max-width: 1000px;
 }
 
-/* Hide the images by default */
 .mySlides {
     display: none;
 }
 
-/* Fading animation */
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -200,7 +230,6 @@ footer {
     to {opacity: 1}
 }
 
-/* Dots/bullets */
 .dot {
     height: 15px;
     width: 15px;
@@ -212,5 +241,9 @@ footer {
 }
 
 .active {
+    background-color: #717171;
+}
+
+.dot:hover {
     background-color: #717171;
 }
