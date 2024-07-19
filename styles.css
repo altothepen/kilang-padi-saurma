@@ -120,7 +120,7 @@ h2 {
     text-align: center;
     width: 30%;
     background-color: #1f1f1f;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s;
 }
@@ -141,9 +141,6 @@ footer {
     padding: 40px 50px;
 }
 
-.contact-info {
-### `styles.css` (lanjutan)
-```css
 .contact-info {
     display: flex;
     flex-wrap: wrap;
@@ -246,4 +243,44 @@ footer {
 
 .dot:hover {
     background-color: #717171;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .keunggulan-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .keunggulan-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
 }
