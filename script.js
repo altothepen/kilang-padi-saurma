@@ -18,7 +18,7 @@ function showSlides() {
 }
 
 function initMap() {
-    const location = { lat: 2.470560, lng: 99.144969 };
+    const location = { lat: 2.470560, lng: 99.144969 }; //
 
     const map = new google.maps.Map(document.getElementById('map'), {
         center: location,
