@@ -1,9 +1,17 @@
-const apiKey = '0b38231e743d44eea246bd062264c755'; // API key dari News API
+const apiKey = '0b38231e743d44eea246bd062264c755';
 const apiUrl = `https://newsapi.org/v2/everything?q=pupuk+pertanian+indonesia&apiKey=${apiKey}`;
 
 async function fetchNews() {
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(apiUrl, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Upgrade': 'HTTP/2.0'
+            }
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
         console.log(data); // Log data untuk memeriksa struktur
         if (data.articles) {
@@ -16,10 +24,13 @@ async function fetchNews() {
     }
 }
 
-
 function displayNews(articles) {
     const newsContainer = document.getElementById('news-articles');
     newsContainer.innerHTML = '';
+    if (!articles || articles.length === 0) {
+        newsContainer.innerHTML = '<p>No articles found.</p>';
+        return;
+    }
     articles.forEach(article => {
         const articleElement = document.createElement('div');
         articleElement.classList.add('article');
