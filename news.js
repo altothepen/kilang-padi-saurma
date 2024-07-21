@@ -5,11 +5,17 @@ async function fetchNews() {
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
-        displayNews(data.articles);
+        console.log(data); // Log data untuk memeriksa struktur
+        if (data.articles) {
+            displayNews(data.articles);
+        } else {
+            console.error('No articles found in the response');
+        }
     } catch (error) {
         console.error('Error fetching news:', error);
     }
 }
+
 
 function displayNews(articles) {
     const newsContainer = document.getElementById('news-articles');
