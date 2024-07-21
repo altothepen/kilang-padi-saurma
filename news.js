@@ -1,14 +1,10 @@
 const apiKey = '0b38231e743d44eea246bd062264c755';
-const apiUrl = `https://newsapi.org/v2/everything?q=pupuk+pertanian+indonesia&apiKey=${apiKey}`;
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+const apiUrl = `${proxyUrl}https://newsapi.org/v2/everything?q=pupuk+pertanian+indonesia&apiKey=${apiKey}`;
 
 async function fetchNews() {
     try {
-        const response = await fetch(apiUrl, {
-            headers: {
-                'Content-Type': 'application/json',
-                'Upgrade': 'HTTP/2.0'
-            }
-        });
+        const response = await fetch(apiUrl);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
