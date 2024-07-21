@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Terkini</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Latest News</h1>
-  <div id="news-container"></div>
-  <script src="news.js"></script>
+    <header class="header-container">
+        <img src="images/logo.png" alt="Distributor Pupuk Saurma" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="sejarah.html">Sejarah Perusahaan</a></li>
+                <li><a href="penghargaan.html">Penghargaan</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="news-container">
+            <h2>Berita Terkini tentang Pupuk dan Pertanian di Indonesia</h2>
+            <div id="news-articles"></div>
+        </section>
+    </main>
+    <script src="news.js"></script>
 </body>
 </html>
