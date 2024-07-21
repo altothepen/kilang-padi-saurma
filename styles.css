@@ -138,6 +138,11 @@ h2 {
 footer {
     background-color: #1f1f1f;
     color: white;
+    padding: 40px 50px### `styles.css` (lanjutan)
+```css
+.footer {
+    background-color: #1f1f1f;
+    color: white;
     padding: 40px 50px;
 }
 
@@ -255,6 +260,7 @@ footer {
 
     nav ul {
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
@@ -274,6 +280,7 @@ footer {
 
     .hero {
         padding: 100px 20px;
+        height: auto;
     }
 
     .hero h1 {
